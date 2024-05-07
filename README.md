@@ -55,9 +55,3 @@ Before running the application, ensure you have the following installed:
 ## Usage
 
 - **Swagger Documentation**: Visualize API documentation using Swagger at [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html).
-  
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any inquiries or support, please contact [Your Name](mailto:your.email@example.com).
