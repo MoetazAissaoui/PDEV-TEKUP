@@ -1,10 +1,10 @@
-package com.tekup.dao;
+package com.tekup.repository;
 
-import com.tekup.model.Role;
+import com.tekup.entity.Role;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RoleDao extends CrudRepository<Role, Long> {
+public interface RoleRepository extends CrudRepository<Role, Long> {
     Role findRoleByName(String name);
 }

@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Set;
 
 import com.tekup.constants.RoleConst;
-import com.tekup.dao.UserDao;
-import com.tekup.model.Role;
-import com.tekup.model.User;
+import com.tekup.repository.UserRepository;
+import com.tekup.entity.Role;
+import com.tekup.entity.User;
 import com.tekup.model.UserDto;
 import com.tekup.service.RoleService;
 import com.tekup.service.UserService;
@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     private RoleService roleService;
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userDao;
 
     @Autowired
     private BCryptPasswordEncoder bcryptEncoder;

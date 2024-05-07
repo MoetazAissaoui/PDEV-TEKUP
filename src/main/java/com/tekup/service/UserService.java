@@ -1,6 +1,6 @@
 package com.tekup.service;
 
-import com.tekup.model.User;
+import com.tekup.entity.User;
 import com.tekup.model.UserDto;
 
 import java.util.List;

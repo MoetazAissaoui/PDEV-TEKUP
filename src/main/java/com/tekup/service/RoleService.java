@@ -1,7 +1,7 @@
 package com.tekup.service;
 
 // Importing the Role model
-import com.tekup.model.Role;
+import com.tekup.entity.Role;
 
 // Declaring the RoleService interface
 public interface RoleService {

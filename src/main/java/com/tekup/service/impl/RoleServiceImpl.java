@@ -1,7 +1,7 @@
 package com.tekup.service.impl;
 
-import com.tekup.dao.RoleDao;
-import com.tekup.model.Role;
+import com.tekup.repository.RoleRepository;
+import com.tekup.entity.Role;
 import com.tekup.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class RoleServiceImpl implements RoleService {
 
     @Autowired
-    private RoleDao roleDao;
+    private RoleRepository roleDao;
 
     @Override
     public Role findByName(String name) {

@@ -1,16 +1,14 @@
 package com.tekup.controller;
 
 import com.tekup.config.TokenProvider;
-import com.tekup.constants.RoleConst;
 import com.tekup.model.AuthToken;
 import com.tekup.model.LoginUser;
-import com.tekup.model.User;
+import com.tekup.entity.User;
 import com.tekup.model.UserDto;
 import com.tekup.service.UserService;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -66,6 +64,7 @@ public class UserController extends BaseController {
     public User createManager(@RequestBody UserDto user){
         return userService.createEmployee(user);
     }
+
     @PreAuthorize("hasRole('HR')")
     @GetMapping("/find/all")
     public List<User> getAllList(){

@@ -1,5 +1,7 @@
 package com.tekup.model;
 
+import com.tekup.entity.User;
+
 public class UserDto {
     
     private String username;

@@ -1,4 +1,4 @@
-package com.tekup.model;
+package com.tekup.entity;
 
 import javax.persistence.*;
 
