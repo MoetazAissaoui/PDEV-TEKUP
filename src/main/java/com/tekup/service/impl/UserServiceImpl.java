@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         Set<Role> roleSet = new HashSet<>();
         roleSet.add(role);
 
-        // If email domain is admin.edu, add HR role
+        // If email domain is hr.tekup.de, add HR role
         if(nUser.getEmail().split("@")[1].equals("hr.tekup.de")){
             role = roleService.findByName(RoleConst._HRRoleNameConst);
             roleSet.add(role);
