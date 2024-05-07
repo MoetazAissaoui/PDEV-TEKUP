@@ -100,4 +100,24 @@ public class UserServiceImpl implements UserDetailsService, UserService {
         nUser.setRoles(roleSet);
         return userDao.save(nUser);
     }
+
+    @Override
+    public User createManager(UserDto user) throws Exception {
+        User nUser = user.getUserFromDto();
+        nUser.setPassword(bcryptEncoder.encode(user.getPassword()));
+
+        Role managerRole = roleService.findByName(RoleConst._ManagerRoleNameConst);
+
+        Set<Role> roleSet = new HashSet<>();
+        if (managerRole != null) {
+            roleSet.add(managerRole);
+        }else {
+            throw new Exception(RoleConst._ManagerRoleNameConst
+                    + " Does not exist.");
+        }
+
+        nUser.setRoles(roleSet);
+        return userDao.save(nUser);
+
+    }
 }

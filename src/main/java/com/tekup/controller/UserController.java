@@ -62,6 +62,11 @@ public class UserController extends BaseController {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
+    @PostMapping("/create/manager")
+    public User createManager(@RequestBody UserDto user){
+        return userService.createEmployee(user);
+    }
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/find/all")
     public List<User> getAllList(){
         return userService.findAll();

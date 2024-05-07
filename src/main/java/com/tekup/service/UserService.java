@@ -18,4 +18,5 @@ public interface UserService {
 
     User createEmployee(UserDto user);
 
+    User createManager(UserDto user) throws Exception;
 }
