@@ -26,7 +26,7 @@ import java.util.List;
 @Data
 @RequiredArgsConstructor
 @Log4j2(topic = "UserController")
-@RequestMapping("/users")
+@RequestMapping("/api/users")
 public class UserController extends BaseController {
 
     private final AuthenticationManager authenticationManager;
