@@ -1,10 +1,10 @@
-package com.tekup.projet;
+package com.tekup;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProjetApplicationTests {
+class AlphaApplicationTests {
 
 	@Test
 	void contextLoads() {
