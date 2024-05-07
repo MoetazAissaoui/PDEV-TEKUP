@@ -55,24 +55,24 @@ public class UserController extends BaseController {
     }
 
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('HR')")
     @PostMapping("/create/employee")
     public User createEmployee(@RequestBody UserDto user){
         return userService.createEmployee(user);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('HR')")
     @PostMapping("/create/manager")
     public User createManager(@RequestBody UserDto user){
         return userService.createEmployee(user);
     }
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('HR')")
     @GetMapping("/find/all")
     public List<User> getAllList(){
         return userService.findAll();
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('HR')")
     @GetMapping("/find/by/username")
     public User getAllList(@RequestParam String username){
         return userService.findOne(username);
