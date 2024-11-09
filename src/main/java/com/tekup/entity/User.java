@@ -37,6 +37,12 @@ public class User {
             @JoinColumn(name = "ROLE_ID") })
     private Set<Role> roles;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<LeaveRequest> leaveRequests;
+
+    @Column(nullable = false)
+    private int leaveBalance = 20; // Default leave balance
+
     public long getId() {
         return id;
     }
@@ -91,5 +97,21 @@ public class User {
 
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
+    }
+
+    public Set<LeaveRequest> getLeaveRequests() {
+        return leaveRequests;
+    }
+
+    public void setLeaveRequests(Set<LeaveRequest> leaveRequests) {
+        this.leaveRequests = leaveRequests;
+    }
+
+    public int getLeaveBalance() {
+        return leaveBalance;
+    }
+
+    public void setLeaveBalance(int leaveBalance) {
+        this.leaveBalance = leaveBalance;
     }
 }
